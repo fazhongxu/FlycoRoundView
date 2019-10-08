@@ -33,4 +33,4 @@ dependencies{
 
 ### 添加扩展  支持 ConstraintLayout
 
-implementation 'com.github.fazhongxu:FlycoRoundView:v1.0.7'
+implementation 'com.github.fazhongxu:FlycoRoundView:v1.0.8'
