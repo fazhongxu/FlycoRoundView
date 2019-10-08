@@ -31,3 +31,6 @@ dependencies{
 | rv_cornerRadius_BR | dimension | corner radius bottom right,unit dp
 | rv_isRippleEnable | boolean | is ripple effect enable for Api21+
 
+### 添加扩展  支持 ConstraintLayout
+
+implementation 'com.github.fazhongxu:FlycoRoundView:v1.0.7'
