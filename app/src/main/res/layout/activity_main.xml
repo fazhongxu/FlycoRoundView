@@ -271,5 +271,34 @@
                     android:textColor="#ffffff"/>
             </com.flyco.roundview.RoundLinearLayout>
         </LinearLayout>
+        <com.flyco.roundview.RoundConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            rv:rv_backgroundColor="#E45171"
+            android:padding="20dp"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            rv:rv_cornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/iv_rectangle_avatar"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:src="@mipmap/ic_portrait"
+                android:textColor="#ffffff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Circle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_rectangle_avatar"
+                android:textColor="#ffffff"/>
+
+        </com.flyco.roundview.RoundConstraintLayout>
     </LinearLayout>
 </ScrollView>
