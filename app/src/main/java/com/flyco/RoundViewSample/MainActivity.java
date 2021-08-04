@@ -2,6 +2,7 @@ package com.flyco.RoundViewSample;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.RippleDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -43,5 +44,17 @@ public class MainActivity extends AppCompatActivity {
                                 ? Color.parseColor("#F6CE59") : Color.parseColor("#ffffff"));
             }
         });
+        findViewById(R.id.ctl_round_container)
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+
+                    }
+                });
+        findViewById(R.id.tv_top_right)
+                .setOnClickListener(null);
+
+        findViewById(R.id.tv_top_right_1)
+                .setOnClickListener(null);
     }
 }

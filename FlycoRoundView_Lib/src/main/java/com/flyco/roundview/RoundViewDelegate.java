@@ -4,18 +4,13 @@ import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
-import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.RippleDrawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Build;
 import android.util.AttributeSet;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class RoundViewDelegate {
@@ -219,7 +214,7 @@ public class RoundViewDelegate {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && isRippleEnable) {
             setDrawable(gd_background, backgroundColor, strokeColor);
             RippleDrawable rippleDrawable = new RippleDrawable(
-                    getPressedColorSelector(backgroundColor, backgroundPressColor), gd_background, null);
+                    getPressedColorSelector(backgroundPressColor, backgroundPressColor), gd_background, null);
             view.setBackground(rippleDrawable);
         } else {
             setDrawable(gd_background, backgroundColor, strokeColor);
@@ -238,16 +233,17 @@ public class RoundViewDelegate {
             }
         }
 
+
         if (view instanceof TextView) {
             if (textPressColor != Integer.MAX_VALUE) {
                 ColorStateList textColors = ((TextView) view).getTextColors();
-//              Log.d("AAA", textColors.getColorForState(new int[]{-android.R.attr.state_pressed}, -1) + "");
                 ColorStateList colorStateList = new ColorStateList(
                         new int[][]{new int[]{-android.R.attr.state_pressed}, new int[]{android.R.attr.state_pressed}},
                         new int[]{textColors.getDefaultColor(), textPressColor});
                 ((TextView) view).setTextColor(colorStateList);
             }
         }
+
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
