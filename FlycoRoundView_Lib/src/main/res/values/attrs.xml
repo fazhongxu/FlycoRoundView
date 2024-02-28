@@ -30,6 +30,12 @@
     <attr name="rv_backgroundPressColor" format="color"/>
     <!-- 圆角弧度,单位dp-->
     <attr name="rv_cornerRadius" format="dimension"/>
+    <!-- 是否是虚线边框-->
+    <attr name="rv_isDashStoke" format="boolean"/>
+    <!-- 虚线边框宽度,单位dp-->
+    <attr name="rv_strokeDashWidth" format="dimension"/>
+    <!-- 虚线边框间隙,单位dp-->
+    <attr name="rv_strokeDashGap" format="dimension"/>
     <!-- 圆角弧度,单位dp-->
     <attr name="rv_strokeWidth" format="dimension"/>
     <!-- 圆角边框颜色-->
@@ -57,6 +63,9 @@
         <attr name="rv_backgroundColor"/>
         <attr name="rv_backgroundPressColor"/>
         <attr name="rv_cornerRadius"/>
+        <attr name="rv_isDashStoke"/>
+        <attr name="rv_strokeDashWidth"/>
+        <attr name="rv_strokeDashGap"/>
         <attr name="rv_strokeWidth"/>
         <attr name="rv_strokeColor"/>
         <attr name="rv_strokePressColor"/>
@@ -74,6 +83,9 @@
         <attr name="rv_backgroundColor"/>
         <attr name="rv_backgroundPressColor"/>
         <attr name="rv_cornerRadius"/>
+        <attr name="rv_isDashStoke"/>
+        <attr name="rv_strokeDashWidth"/>
+        <attr name="rv_strokeDashGap"/>
         <attr name="rv_strokeWidth"/>
         <attr name="rv_strokeColor"/>
         <attr name="rv_strokePressColor"/>
@@ -90,6 +102,9 @@
         <attr name="rv_backgroundColor"/>
         <attr name="rv_backgroundPressColor"/>
         <attr name="rv_cornerRadius"/>
+        <attr name="rv_isDashStoke"/>
+        <attr name="rv_strokeDashWidth"/>
+        <attr name="rv_strokeDashGap"/>
         <attr name="rv_strokeWidth"/>
         <attr name="rv_strokeColor"/>
         <attr name="rv_strokePressColor"/>
@@ -106,6 +121,9 @@
         <attr name="rv_backgroundColor"/>
         <attr name="rv_backgroundPressColor"/>
         <attr name="rv_cornerRadius"/>
+        <attr name="rv_isDashStoke"/>
+        <attr name="rv_strokeDashWidth"/>
+        <attr name="rv_strokeDashGap"/>
         <attr name="rv_strokeWidth"/>
         <attr name="rv_strokeColor"/>
         <attr name="rv_strokePressColor"/>
@@ -122,6 +140,9 @@
         <attr name="rv_backgroundColor"/>
         <attr name="rv_backgroundPressColor"/>
         <attr name="rv_cornerRadius"/>
+        <attr name="rv_isDashStoke"/>
+        <attr name="rv_strokeDashWidth"/>
+        <attr name="rv_strokeDashGap"/>
         <attr name="rv_strokeWidth"/>
         <attr name="rv_strokeColor"/>
         <attr name="rv_strokePressColor"/>

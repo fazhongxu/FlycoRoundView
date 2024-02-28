@@ -26,6 +26,9 @@ public class RoundViewDelegate {
     private int cornerRadius_BL;
     private int cornerRadius_BR;
     private int strokeWidth;
+    private boolean isDashStoke;
+    private int stokeDashWidth;
+    private int stokeDashGap;
     private int strokeColor;
     private int strokePressColor;
     private int textPressColor;
@@ -45,6 +48,9 @@ public class RoundViewDelegate {
         backgroundColor = ta.getColor(R.styleable.RoundTextView_rv_backgroundColor, Color.TRANSPARENT);
         backgroundPressColor = ta.getColor(R.styleable.RoundTextView_rv_backgroundPressColor, Integer.MAX_VALUE);
         cornerRadius = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius, 0);
+        isDashStoke = ta.getBoolean(R.styleable.RoundTextView_rv_isDashStoke, false);
+        stokeDashWidth = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_strokeDashWidth, 0);
+        stokeDashGap = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_strokeDashGap, 0);
         strokeWidth = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_strokeWidth, 0);
         strokeColor = ta.getColor(R.styleable.RoundTextView_rv_strokeColor, Color.TRANSPARENT);
         strokePressColor = ta.getColor(R.styleable.RoundTextView_rv_strokePressColor, Integer.MAX_VALUE);
@@ -72,6 +78,21 @@ public class RoundViewDelegate {
 
     public void setCornerRadius(int cornerRadius) {
         this.cornerRadius = dp2px(cornerRadius);
+        setBgSelector();
+    }
+
+    public void setDashStoke(boolean isDashStoke) {
+        this.isDashStoke = isDashStoke;
+        setBgSelector();
+    }
+
+    public void setStrokeDashWidth(int stokeDashWidth) {
+        this.stokeDashWidth = dp2px(stokeDashWidth);
+        setBgSelector();
+    }
+
+    public void setStrokeDashGap(int stokeDashGap) {
+        this.stokeDashGap = dp2px(stokeDashGap);
         setBgSelector();
     }
 
@@ -205,7 +226,11 @@ public class RoundViewDelegate {
             gd.setCornerRadius(cornerRadius);
         }
 
-        gd.setStroke(strokeWidth, strokeColor);
+        if (isDashStoke) {
+            gd.setStroke(strokeWidth, strokeColor, stokeDashWidth, stokeDashGap);
+        } else {
+            gd.setStroke(strokeWidth, strokeColor);
+        }
     }
 
     public void setBgSelector() {
