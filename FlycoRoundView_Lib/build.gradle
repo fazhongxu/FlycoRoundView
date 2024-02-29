@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven-publish'
+
 //apply plugin: 'com.github.dcendents.android-maven'
 //apply plugin: 'com.jfrog.bintray'
 
@@ -17,6 +19,17 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            //from components.release
+            groupId = 'com.flyco.roundview'
+            artifactId = 'FlycoRoundView_Lib'
+            version = "1.10.1"
         }
     }
 }
