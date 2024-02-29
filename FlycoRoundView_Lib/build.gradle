@@ -44,9 +44,9 @@ subprojects {
             publications {
                 mavenJava(MavenPublication) {
                     from components.java
-                    groupId = 'com.github.mint'
-                    artifactId = 'mint-android-app'
-                    version = '0.0.4'
+                    groupId = 'com.flyco.roundview'
+                    artifactId = 'FlycoRoundView_Lib'
+                    version = "1.10.1"
                 }
             }
         }
