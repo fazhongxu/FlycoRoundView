@@ -23,17 +23,47 @@ android {
     }
 }
 
-publishing {
-    publications {
-        release(MavenPublication) {
-//            from components.java
-            from components.findByName("release")
-            groupId = 'com.flyco.roundview'
-            artifactId = 'FlycoRoundView_Lib'
-            version = "1.10.1"
+/*afterEvaluate {
+    publishing {
+        publications {
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.mint'
+                artifactId = 'mint-android-app'
+                version = '0.0.4'
+            }
+        }
+    }
+}*/
+
+subprojects {
+    plugins.withId('java') {
+        apply plugin: 'maven-publish'
+
+        publishing {
+            publications {
+                mavenJava(MavenPublication) {
+                    from components.java
+                    groupId = 'com.github.mint'
+                    artifactId = 'mint-android-app'
+                    version = '0.0.4'
+                }
+            }
         }
     }
 }
+
+//publishing {
+//    publications {
+//        release(MavenPublication) {
+////            from components.java
+//            from components.findByName("release")
+//            groupId = 'com.flyco.roundview'
+//            artifactId = 'FlycoRoundView_Lib'
+//            version = "1.10.1"
+//        }
+//    }
+//}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
