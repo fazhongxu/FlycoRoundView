@@ -7,11 +7,11 @@ apply plugin: 'maven-publish'
 // 这个version是区分library版本的，因此当我们需要更新library时记得修改这个version
 version = "1.10.0"
 android {
-    compileSdkVersion 23
+    compileSdkVersion 26
 
     defaultConfig {
         minSdkVersion 9
-        targetSdkVersion 23
+        targetSdkVersion 26
         versionCode 114
         versionName version
     }
