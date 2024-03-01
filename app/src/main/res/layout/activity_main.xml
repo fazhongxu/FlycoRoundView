@@ -153,7 +153,23 @@
                 android:textColor="#ffffff"
                 app:rv_backgroundColor="#7A9EAF"
                 app:rv_cornerRadius_BR="10dp" />
+
         </LinearLayout>
+
+        <com.flyco.roundview.RoundEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.5dp"
+            android:layout_marginBottom="10dp"
+            app:rv_backgroundColor="#0B616C"
+            app:rv_cornerRadius="5dp"
+            android:layout_weight="1"
+            app:rv_backgroundPressColor="#0B616C"
+            android:gravity="center"
+            android:textColorHint="@android:color/white"
+            android:hint="RoundEditText"
+            android:padding="10dp"
+            android:textColor="#ffffff" />
 
         <com.flyco.roundview.RoundFrameLayout
             android:layout_width="150dp"
@@ -311,8 +327,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Circle"
-                android:textColor="#ffffff"
+                android:text="RoundConstraintLayout"
+                android:textColor="#0B616C"
+                android:layout_marginLeft="5dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toRightOf="@+id/iv_rectangle_avatar"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -326,13 +343,13 @@
             android:layout_marginTop="10dp"
             android:padding="20dp"
             app:rv_backgroundColor="#FFFFFF"
-            app:rv_isDashStoke="true"
-            app:rv_strokeWidth="1dp"
-            app:rv_strokeColor="@color/colorPrimary"
-            app:rv_strokeDashWidth="5dp"
-            app:rv_strokeDashGap="5dp"
             app:rv_backgroundPressColor="#F08A5D"
-            app:rv_cornerRadius_TR="5dp">
+            app:rv_cornerRadius_TR="5dp"
+            app:rv_isDashStoke="true"
+            app:rv_strokeColor="@color/colorPrimary"
+            app:rv_strokeDashGap="5dp"
+            app:rv_strokeDashWidth="5dp"
+            app:rv_strokeWidth="1dp">
 
             <ImageView
                 android:id="@+id/iv_rectangle_avatar1"
@@ -348,10 +365,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="2dp"
-                android:text="Circle"
-                android:textColor="#ffffff"
+                android:text="Dash"
+                android:layout_marginLeft="5dp"
+                android:textColor="#0B616C"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toRightOf="@+id/iv_rectangle_avatar"
+                app:layout_constraintLeft_toRightOf="@+id/iv_rectangle_avatar1"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </com.flyco.roundview.RoundConstraintLayout>
