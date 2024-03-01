@@ -5,7 +5,6 @@ A library helps Android built-in views easy and convenient to set round rectangl
 ![](https://github.com/H07000223/FlycoRoundView/blob/master/preview.gif)
 
 ##
-![](https://github.com/fazhongxu/FlycoRoundView/blob/master/preview1.jpg)
 <img src="https://github.com/fazhongxu/FlycoRoundView/blob/master/preview1.jpg" width="319" height="577">
 
 ##Gradle
