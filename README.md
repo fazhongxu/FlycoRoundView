@@ -13,7 +13,7 @@ A library helps Android built-in views easy and convenient to set round rectangl
 
 ```groovy
 dependencies{
-    compile 'com.github.fazhongxu:FlycoRoundView:v1.10.8'
+    compile 'com.github.fazhongxu:FlycoRoundView:v1.10.9'
 }
 ```
 ###Attributes
