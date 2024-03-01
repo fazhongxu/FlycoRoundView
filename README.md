@@ -7,6 +7,8 @@ A library helps Android built-in views easy and convenient to set round rectangl
 ##
 <img src="https://github.com/fazhongxu/FlycoRoundView/blob/master/preview1.jpg" width="319" height="577">
 
+### 添加扩展  v1.0.8支持 ConstraintLayout，v1.10.8支持虚线边框
+
 ##Gradle
 
 ```groovy
@@ -14,7 +16,6 @@ dependencies{
     compile 'com.github.fazhongxu:FlycoRoundView:v1.10.8'
 }
 ```
-
 ###Attributes
 
 |name|format|description|
@@ -36,8 +37,4 @@ dependencies{
 | rv_cornerRadius_BL | dimension | corner radius bottom left,unit dp
 | rv_cornerRadius_BR | dimension | corner radius bottom right,unit dp
 | rv_isRippleEnable | boolean | is ripple effect enable for Api21+
-
-### 添加扩展  v1.0.8支持 ConstraintLayout，v1.10.8支持虚线边框
-
-implementation 'com.github.fazhongxu:FlycoRoundView:v1.10.8'
 
