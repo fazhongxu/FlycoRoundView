@@ -19,6 +19,9 @@ dependencies{
 | rv_backgroundColor | color | background color
 | rv_backgroundPressColor | color | background press color
 | rv_cornerRadius | dimension | background rectangle corner radius,unit dp
+| rv_isDashStoke | dimension | dash stoke,boolean
+| rv_strokeDashWidth | dimension | dash width,unit dp
+| rv_strokeDashGap | dimension | dash gap,unit dp
 | rv_strokeWidth | dimension | background rectangle stroke width,unit dp
 | rv_strokeColor | color |background rectangle stroke color
 | rv_strokePressColor | color |background rectangle stroke press color
@@ -31,6 +34,7 @@ dependencies{
 | rv_cornerRadius_BR | dimension | corner radius bottom right,unit dp
 | rv_isRippleEnable | boolean | is ripple effect enable for Api21+
 
-### 添加扩展  支持 ConstraintLayout
+### 添加扩展  v1.0.8支持 ConstraintLayout，v1.10.8支持虚线边框
 
-implementation 'com.github.fazhongxu:FlycoRoundView:v1.0.8'
+implementation 'com.github.fazhongxu:FlycoRoundView:v1.10.8'
+
