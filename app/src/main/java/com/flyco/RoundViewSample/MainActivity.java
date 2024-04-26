@@ -56,5 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.tv_top_right_1)
                 .setOnClickListener(null);
+        findViewById(R.id.ctl_round_container1)
+                .setOnClickListener(null);
     }
 }
