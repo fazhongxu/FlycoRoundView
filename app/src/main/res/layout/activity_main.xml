@@ -345,6 +345,7 @@
             app:rv_cornerRadius_TR="5dp"
             android:background="@android:color/white"
             app:rv_isDashStoke="true"
+            app:rv_backgroundPressColor="#1f000000"
             app:rv_strokeColor="@color/colorPrimary"
             app:rv_strokeDashGap="5dp"
             app:rv_strokeDashWidth="5dp"

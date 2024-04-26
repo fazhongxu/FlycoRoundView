@@ -39,11 +39,6 @@ public class RoundViewDelegate {
     private boolean isRippleEnable;
     private float[] radiusArr = new float[8];
 
-    /**
-     * selectableItemBackground ripple_material_light
-     */
-    private int defaultBackgroundPressColor = Color.parseColor("#1f000000");
-
     public RoundViewDelegate(View view, Context context, AttributeSet attrs) {
         this.view = view;
         this.context = context;
@@ -53,7 +48,7 @@ public class RoundViewDelegate {
     private void obtainAttributes(Context context, AttributeSet attrs) {
         TypedArray ta = context.obtainStyledAttributes(attrs, R.styleable.RoundTextView);
         backgroundColor = ta.getColor(R.styleable.RoundTextView_rv_backgroundColor, Color.TRANSPARENT);
-        backgroundPressColor = ta.getColor(R.styleable.RoundTextView_rv_backgroundPressColor, defaultBackgroundPressColor);
+        backgroundPressColor = ta.getColor(R.styleable.RoundTextView_rv_backgroundPressColor, Integer.MAX_VALUE);
         cornerRadius = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius, 0);
         isDashStoke = ta.getBoolean(R.styleable.RoundTextView_rv_isDashStoke, false);
         stokeDashWidth = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_strokeDashWidth, 0);
@@ -68,7 +63,7 @@ public class RoundViewDelegate {
         cornerRadius_TR = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius_TR, 0);
         cornerRadius_BL = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius_BL, 0);
         cornerRadius_BR = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius_BR, 0);
-        isRippleEnable = ta.getBoolean(R.styleable.RoundTextView_rv_isRippleEnable, false);
+        isRippleEnable = ta.getBoolean(R.styleable.RoundTextView_rv_isRippleEnable, true);
 
         if (backgroundColor == Color.TRANSPARENT) {
             Drawable background = view.getBackground();
