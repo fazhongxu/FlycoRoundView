@@ -63,7 +63,7 @@ public class RoundViewDelegate {
         cornerRadius_TR = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius_TR, 0);
         cornerRadius_BL = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius_BL, 0);
         cornerRadius_BR = ta.getDimensionPixelSize(R.styleable.RoundTextView_rv_cornerRadius_BR, 0);
-        isRippleEnable = ta.getBoolean(R.styleable.RoundTextView_rv_isRippleEnable, true);
+        isRippleEnable = ta.getBoolean(R.styleable.RoundTextView_rv_isRippleEnable, false);
 
         if (backgroundColor == Color.TRANSPARENT) {
             Drawable background = view.getBackground();
